@@ -1,3 +1,7 @@
+# TCP Server Client samples
+Implement a tcp server and client. Messages structs is exchanged by gob library.
+Client has three kind of messages to relay text messages between other clients.
+
 # Setup
 This project should be located $GOPATH/src/github.com/yusuke0913/tcp-server
 ```sh
@@ -8,7 +12,7 @@ $GOPATH/src/github.com/yusuke0913/tcp-server
 make dep
 ```
 
-I've not used any external libs.
+# Server Listen Port
 localhost:7000 is used for this server.
 
 # Directories
@@ -29,16 +33,16 @@ localhost:7000 is used for this server.
 ```
 
 ### bin directory
-has a binary built.
+It has built binaries
 
 ### api directory
-has message structs between server and client.
+It has message structs and interfaces between server and client.
 
 ### server directory
-has a server source code and testing code.
+It has the server source code and testing code.
 
 ### client directory
-has a client source code and testing code.
+It has the client source code and testing code.
 
 # Build
 
@@ -55,7 +59,7 @@ make client
 ```
 
 ## Client Concurrency
-The default number of clients is 10.
+The default number of clients is 3.
 You can update the concurrency of clients by command line arguments.
 
 ```sh
